@@ -3,7 +3,7 @@ import Redis from 'koa-redis'
 import nodeMailer from 'nodemailer'
 import User from '../dbs/models/users'
 import Passport from './utils/passport'
-import config from './dbs/config'
+import config from '../dbs/config'
 import axios from './utils/axios'
 
 let router = new Router({
@@ -25,7 +25,7 @@ router.post('/singnup',async (ctx) => {
 	if (code) {
 		//hget redis命令  HGET获取对应 field 对应的 value
 		const saveCode = await Store.hget(`nodemailer:${username}`,'code')
-		const saveExpire await Store.hget(`nodeMailer:${username}`,'expire')
+		const saveExpire = await Store.hget(`nodeMailer:${username}`,'expire')
 
 		if (code === saveCode) {
 			//当前时间大于发送验证码时间后一分钟
@@ -65,7 +65,7 @@ router.post('/singnup',async (ctx) => {
 		if (res.data&&res.data.code === 0) {
 			ctx.body = {
 				code:0,
-				msg:'注册成功'，
+				msg:'注册成功',
 				user:res.data.user
 			}
 		}else{
