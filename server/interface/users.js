@@ -61,7 +61,7 @@ router.post('/singnup',async (ctx) => {
 	let newUser = await User.create({username,password,email})
 	if (newUser) {
 		//创建成功后，登录，应该把登录模块化，然后在这里调用
-		let newUser = await axios.post('/users/singnin',{username,password})
+		let res = await axios.post('/users/singnin',{username,password})
 		if (res.data&&res.data.code === 0) {
 			ctx.body = {
 				code:0,

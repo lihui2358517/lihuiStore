@@ -47,12 +47,14 @@
 	</div>
 </template>
 <script>
+import CryptoJS from 'crypto-js'
 	export default{
 		layout:'blank',
 		data(){
 			return{
 				statusMsg:'',
 				error:'',
+				timerid:true,
 				ruleForm:{
 					name:'',
 					email:'',
@@ -92,7 +94,7 @@
 						validator:(rule,value,callback)=>{
 							if (value === "") {
 								callback(new Error("请再次输入密码"))
-							}else if(value !== this.ruleForm.pws){
+							}else if(value !== this.ruleForm.pwd){
 								callback(new Error("两次输入的密码不一致"))
 							}else{
 								callback();
@@ -106,10 +108,77 @@
 		},
 		methods:{
 			sendMsg(){
-
+			  const self = this;
+		      let namePass
+		      let emailPass
+		      if (!self.timerid) {
+		        return false
+		      }
+		      self.timerid = false
+		      this.$refs['ruleForm'].validateField('name', (valid) => {
+		        namePass = valid
+		      })
+		      self.statusMsg = ''
+		      if (namePass) {
+		        return false
+		      }
+		      this.$refs['ruleForm'].validateField('email', (valid) => {
+		        emailPass = valid
+		      })
+		      if (!namePass && !emailPass) {
+		        self.$axios.post('/users/verify', {
+		          username: encodeURIComponent(self.ruleForm.name),
+		          email: self.ruleForm.email
+		        }).then(({
+		          status,
+		          data
+		        }) => {
+		          if (status === 200 && data && data.code === 0) {
+		            let count = 60;
+		            let timeOut = null;
+		            self.statusMsg = `验证码已发送,剩余${count--}秒`
+		            timeOut = setInterval(function () {
+		              self.statusMsg = `验证码已发送,剩余${count--}秒`
+		              if (count === 0) {
+		                clearInterval(timeOut)
+		                self.timerid = true
+		                self.statusMsg = ''
+		              }
+		            }, 1000)
+		          } else {
+		            self.statusMsg = data.msg
+		          }
+		        })
+		      }
 			},
 			register(){
-				
+				let self = this
+				this.$refs['ruleForm'].validate((valid)=>{
+					if (valid) {
+						self.$axios.post('/users/singnup',{
+							username:window.encodeURIComponent(self.ruleForm.name),
+							password:CryptoJS.MD5(self.ruleForm.pwd).toString(),
+							email: self.ruleForm.email,
+                    		code: self.ruleForm.code
+						}).then(({
+		                    status,
+		                    data
+		                  }) => {
+		                    if (status === 200) {
+		                      if (data && data.code === 0) {
+		                        location.href = '/login'
+		                      } else {
+		                        self.error = data.msg
+		                      }
+		                    } else {
+		                      self.error = `服务器出错，错误码:${status}`
+		                    }
+		                    setTimeout(function () {
+		                      self.error = ''
+		                    }, 2500)
+		                  })
+							}
+						})
 			}
 		}
 	};
