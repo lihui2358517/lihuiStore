@@ -21,7 +21,7 @@ const store = () => new Vuex.Store({
       const {status:statusGeo, data: { province,city}} = await app.$axios.get('/geo/getPosition')
       //commit 触发geo模板的mutations中的setPosition函数
       commit('geo/setPosition', statusGeo === 200 ? { city, province } : { city: '', province: '' })
-      // console.log(province,city)
+      console.log(province,city)
       const {status:statusMenu, data: { menu }} = await app.$axios.get('/geo/menu')
       //commit 触发geo模板的mutations中的setPosition函数
       commit('home/setMenu', statusMenu === 200 ?menu :[])
