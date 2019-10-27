@@ -48,197 +48,13 @@ export default {
   data: () => {
     return {
       kind: 'all',
+      keyword:'景点',
       list: {
-        all: [
-          {
-            title:"晓本烘焙·茶本铺（东方广场店）",
-            img:'https://p0.meituan.net/msmerchant/36cbbb3fe477d86bc7bf45714724b5f6405667.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"晓本烘焙·茶本铺（东方广场店）",
-            img:'https://p0.meituan.net/msmerchant/36cbbb3fe477d86bc7bf45714724b5f6405667.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"晓本烘焙·茶本铺（东方广场店）",
-            img:'https://p0.meituan.net/msmerchant/36cbbb3fe477d86bc7bf45714724b5f6405667.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"晓本烘焙·茶本铺（东方广场店）",
-            img:'https://p0.meituan.net/msmerchant/36cbbb3fe477d86bc7bf45714724b5f6405667.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"晓本烘焙·茶本铺（东方广场店）",
-            img:'https://p0.meituan.net/msmerchant/36cbbb3fe477d86bc7bf45714724b5f6405667.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"晓本烘焙·茶本铺（东方广场店）",
-            img:'https://p0.meituan.net/msmerchant/36cbbb3fe477d86bc7bf45714724b5f6405667.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          }
-        ],
-        part: [
-          {
-            title:"约会聚餐",
-            img:'https://p1.meituan.net/mogu/a3c70845bffd26ce9df01de67c1971e0735080.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"约会聚餐",
-            img:'https://p1.meituan.net/mogu/a3c70845bffd26ce9df01de67c1971e0735080.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"约会聚餐",
-            img:'https://p1.meituan.net/mogu/a3c70845bffd26ce9df01de67c1971e0735080.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"约会聚餐",
-            img:'https://p1.meituan.net/mogu/a3c70845bffd26ce9df01de67c1971e0735080.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"约会聚餐",
-            img:'https://p1.meituan.net/mogu/a3c70845bffd26ce9df01de67c1971e0735080.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"约会聚餐",
-            img:'https://p1.meituan.net/mogu/a3c70845bffd26ce9df01de67c1971e0735080.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          }
-        ],
-        spa: [
-          {
-            title:"丽人SPA",
-            img:'https://p1.meituan.net/merchantpic/19d7ad2f8e4753a50442226610af0074506930.jpg@240w_180h_1e_1c_1l%7Cwatermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20%7C368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"丽人SPA",
-            img:'https://p1.meituan.net/merchantpic/19d7ad2f8e4753a50442226610af0074506930.jpg@240w_180h_1e_1c_1l%7Cwatermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20%7C368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"丽人SPA",
-            img:'https://p1.meituan.net/merchantpic/19d7ad2f8e4753a50442226610af0074506930.jpg@240w_180h_1e_1c_1l%7Cwatermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20%7C368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"丽人SPA",
-            img:'https://p1.meituan.net/merchantpic/19d7ad2f8e4753a50442226610af0074506930.jpg@240w_180h_1e_1c_1l%7Cwatermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20%7C368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"丽人SPA",
-            img:'https://p1.meituan.net/merchantpic/19d7ad2f8e4753a50442226610af0074506930.jpg@240w_180h_1e_1c_1l%7Cwatermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20%7C368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"丽人SPA",
-            img:'https://p1.meituan.net/merchantpic/19d7ad2f8e4753a50442226610af0074506930.jpg@240w_180h_1e_1c_1l%7Cwatermark=1&&r=2&p=9&x=2&y=2&relative=1&o=20%7C368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          }
-        ],
-        movie: [
-          {
-            title:"电影演出",
-            img:'https://p1.meituan.net/deal/46d9aae57e2a58019d73a1e7624ce86983140.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"电影演出",
-            img:'https://p1.meituan.net/deal/46d9aae57e2a58019d73a1e7624ce86983140.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"电影演出",
-            img:'https://p1.meituan.net/deal/46d9aae57e2a58019d73a1e7624ce86983140.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"电影演出",
-            img:'https://p1.meituan.net/deal/46d9aae57e2a58019d73a1e7624ce86983140.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"电影演出",
-            img:'https://p1.meituan.net/deal/46d9aae57e2a58019d73a1e7624ce86983140.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"电影演出",
-            img:'https://p1.meituan.net/deal/46d9aae57e2a58019d73a1e7624ce86983140.jpg@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          }
-        ],
-        travel: [
-          {
-            title:"品质出游",
-            img:'https://p1.meituan.net/tdchotel/8d2d8549f205d79fbc2319f65ac1ff821861291.png@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"品质出游",
-            img:'https://p1.meituan.net/tdchotel/8d2d8549f205d79fbc2319f65ac1ff821861291.png@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"品质出游",
-            img:'https://p1.meituan.net/tdchotel/8d2d8549f205d79fbc2319f65ac1ff821861291.png@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"品质出游",
-            img:'https://p1.meituan.net/tdchotel/8d2d8549f205d79fbc2319f65ac1ff821861291.png@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"品质出游",
-            img:'https://p1.meituan.net/tdchotel/8d2d8549f205d79fbc2319f65ac1ff821861291.png@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          },
-           {
-            title:"品质出游",
-            img:'https://p1.meituan.net/tdchotel/8d2d8549f205d79fbc2319f65ac1ff821861291.png@368w_208h_1e_1c',
-            pos:'星座生日蛋糕1个，约6英寸，圆形',
-            price:'268'
-          }
-        ]
+        all: [],
+        part: [],
+        spa: [],
+        movie: [],
+        travel: []
       }
     }
   },
@@ -246,11 +62,129 @@ export default {
     cur: function () {
       return this.list[this.kind]
     }
-  
+  },
+  created(){
+    const obj = [
+      {
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      },{
+          title:"加载中···",
+          pos:"加载中···",
+          price:'暂无',
+          img:require('../../assets/img/loading.jpg'),
+          url:'//abc.com'
+      }
+      ]
+    this.list = {
+        all: obj,
+        part: obj,
+        spa: obj,
+        movie: obj,
+        travel: obj
+    }
+
+    
+  },
+  async mounted(){
+    let self = this;
+    let keyword = self.keyword
+    let {status,data:{count,pois}}=await self.$axios.get('/search/resultsByKeywords',{
+          params:{
+            keyword,
+            city:self.$store.state.geo.position.city
+          }
+        })
+    if(status===200&&count>0){
+      let r= pois.filter(item=>item.photos.length).map(item=>{
+        return {
+          title:item.name,
+          pos:item.type.split(';')[0],
+          price:item.biz_ext.cost||'暂无',
+          img:item.photos[0].url,
+          url:'//abc.com'
+        }
+      })
+      self.list[self.kind]=r.slice(0,9)
+    }else{
+      self.list[self.kind]=[]
+    }
   },
   methods: {
-    enter(e){
-      this.kind = e.target.getAttribute('kind')
+    enter:async function(e){
+      let dom = e.target
+      let tag = dom.tagName.toLowerCase()
+      let self = this
+      if (tag === 'dd') {
+        self.kind = dom.getAttribute('kind')
+        let keyword = dom.getAttribute('keyword')
+        let {status,data:{count,pois}}=await self.$axios.get('/search/resultsByKeywords',{
+          params:{
+            keyword,
+            city:self.$store.state.geo.position.city
+          }
+        })
+        if(status===200&&count>0){
+          let r= pois.filter(item=>item.photos.length).map(item=>{
+            return {
+              title:item.name,
+              pos:item.type.split(';')[0],
+              price:item.biz_ext.cost||'暂无',
+              img:item.photos[0].url,
+              url:'//abc.com'
+            }
+          })
+          self.list[self.kind]=r.slice(0,9)
+        }else{
+          self.list[self.kind]=[]
+        }
+      }
+
     }
   },
 

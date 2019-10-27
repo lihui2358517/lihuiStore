@@ -1,7 +1,7 @@
 
 
 //vue components 共享数据
-const state = () => ({menu: []})
+const state = () => ({menu: [], hotPlace: []})
 
 
 
@@ -9,6 +9,9 @@ const state = () => ({menu: []})
 const mutations = {
   setMenu(state, val) {
     state.menu = val
+  },
+  setHotPlace(state, val) {
+    state.hotPlace = val
   }
 }
 
@@ -19,6 +22,9 @@ const actions = {
 	//{commit} = state = {commit,...}
   setMenu:function({commit}, val){
     commit('setMenu', val)
+  },
+  setHotPlace:function({ commit}, hotPlace){
+    commit('setHotPlace', hotPlace)
   }
 }
 

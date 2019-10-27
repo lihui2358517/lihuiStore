@@ -180,7 +180,7 @@ import CryptoJS from 'crypto-js'
 							}
 						})
 			}
-		}
+		},
 	};
 </script>
 <style lang="scss">

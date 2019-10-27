@@ -20,11 +20,16 @@ const store = () => new Vuex.Store({
     async nuxtServerInit({ commit}, { req, app }) {
       const {status:statusGeo, data: { province,city}} = await app.$axios.get('/geo/getPosition')
       //commit 触发geo模板的mutations中的setPosition函数
-      commit('geo/setPosition', statusGeo === 200 ? { city, province } : { city: '', province: '' })
-      console.log(province,city)
+      await commit('geo/setPosition', statusGeo === 200 ? { city, province } : { city: '', province: '' })
       const {status:statusMenu, data: { menu }} = await app.$axios.get('/geo/menu')
       //commit 触发geo模板的mutations中的setPosition函数
       commit('home/setMenu', statusMenu === 200 ?menu :[])
+      const {status:status3,data:{result}}=await app.$axios.get('/search/hotPlace',{
+        params:{
+          city:city.replace('市','')
+        }
+      })
+      commit('home/setHotPlace',status3===200?result:[])
     }
   }
 })
