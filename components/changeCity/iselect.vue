@@ -93,11 +93,18 @@ export default {
         }
       }
     },200),
-    handleSelect:function(item){
+    handleSelect:async function(item){
       console.log(item)
       let province = this.$store.state.geo.position.province;
       let value = typeof item === 'string'?item:item.value
       this.$store.dispatch('geo/setPosition',{city:value, province})
+      const {status:status3,data:{result}}=await this.$axios.get('/search/hotPlace',{
+        params:{
+          city:value.replace('市','')
+        }
+      })
+      console.log(result)
+      this.$store.dispatch('home/setHotPlace',status3===200?result:[])
       //这里不能用$router.go()或location.href，用这两个方法，页面刷新，store数据重置，用push只是路由间的跳转，数据不会重置
       this.$router.push('/')
     }
