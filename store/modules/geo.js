@@ -1,3 +1,21 @@
+//let val = JSON.parse(window.SessionSotrage.getItem("position"))||''
+
+// // 服务器存储的cookie
+// let sessions = {};
+// let key = 'session_id';
+// //
+// const EXPIRES = 2 * 60 * 1000;
+
+
+// let generate = function () {
+//   let session = {};
+//   session.id = String((new Date()).getTime() + Math.random())
+//   session.cookie = {
+//     expire: (new Date()).getTime() + EXPIRES
+//   };
+//   sessions[session.id] = session;
+//   return session;
+// };
 
 
 //vue components 共享数据
@@ -9,6 +27,7 @@ const state = () => ({position: {}})
 const mutations = {
   setPosition(state, val) {
     state.position = val
+    // window.SessionSotrage.setItem("position",JSON.stringify(val))
   }
 }
 

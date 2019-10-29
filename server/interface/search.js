@@ -126,6 +126,7 @@ router.get('/products', async (ctx) => {
   if (status === 200) {
     ctx.body = {
       product,
+      //isAuthenticated 判断登录状态
       more: ctx.isAuthenticated() ? more: [],
       login: ctx.isAuthenticated()
     }

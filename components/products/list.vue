@@ -9,10 +9,10 @@
       >{{ item.txt }}</dd>
     </dl>
     <ul>
-      <Item
-        v-for="(item,idx) in sortList"
-        :key="idx"
-        :meta="item"/>
+      <template v-for="(meta,idx) in sortList">
+         <Item :key="idx" :meta="meta"/>
+      </template>
+     
     </ul>
   </div>
 </template>
@@ -60,9 +60,13 @@ export default {
     let { data } = await app.$axios.get('searchList')
     return { items: data.list }
   },
+  watch: {
+    list() {
+      this.sortList = this.list
+    }
+  },
   created(){
     this.sortList = this.list
-    console.log(this.list)
   },
   methods: {
     navSelect: function (currentIdx,txt) {

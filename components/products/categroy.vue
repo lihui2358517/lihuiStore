@@ -26,29 +26,29 @@
 </template>
 
 <script>
-import iselect from './iselect.vue'
-export default {
-  components: {
-    iselect
-  },
-  props: {
-    types: {
-      type: Array,
-      default(){
-        return []
-      }
+  import iselect from './iselect.vue'
+  export default {
+    components: {
+      iselect
     },
-    areas: {
-      type:Array,
-      default(){
-        return []
+    props: {
+      types: {
+        type: Array,
+        default(){
+          return []
+        }
+      },
+      areas: {
+        type:Array,
+        default(){
+          return []
+        }
       }
     }
-  },
-}
+  };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .m-product-categroy{
     padding: 15px 20px 0;
     background: #FFF;

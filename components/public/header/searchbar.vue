@@ -88,7 +88,8 @@ export default {
 
     },
     goProduct(key){
-    	this.$router.push('/products?keyword='+encodeURIComponent(key))
+    	// "/products?city="++"&keyword="+encodeURIComponent(item.name)'
+    	this.$router.push("/products?keyword="+encodeURIComponent(key))
     },
     input: _.debounce(async function() {
       let self = this;

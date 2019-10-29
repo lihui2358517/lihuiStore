@@ -58,9 +58,15 @@ export default {
     }
   },
   methods:{
-  	goHome(city){
+  	goHome:async function(city){
   		let province = this.$store.state.geo.position.province;
       	this.$store.dispatch('geo/setPosition',{city, province})
+        const {status:status3,data:{result}}=await this.$axios.get('/search/hotPlace',{
+          params:{
+            city:city.replace('市','')
+          }
+        })
+        this.$store.dispatch('home/setHotPlace',status3===200?result:[])
       	this.$router.push('/')
   	}
   }
