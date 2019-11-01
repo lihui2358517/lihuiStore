@@ -52,6 +52,7 @@ export default {
           city
         }
       })
+     
       if (status === 200 && count > 0 && status2 === 200) {
         this.list = pois.filter(item => item.photos.length).map(item => {
           return {

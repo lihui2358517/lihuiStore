@@ -26,7 +26,8 @@
     <ul class="ibody">
       <li
         v-for="(item,index) in cur"
-        :key="index">
+        :key="index"
+         @click='goDetail(item.title,item.pos)'>
         <el-card
           :body-style="{ padding: '0px' }"
           shadow="never">
@@ -147,7 +148,7 @@ export default {
           pos:item.type.split(';')[0],
           price:item.biz_ext.cost||'暂无',
           img:item.photos[0].url,
-          url:'//abc.com'
+          url:'//abc.com',
         }
       })
       self.list[self.kind]=r.slice(0,9)
@@ -185,7 +186,17 @@ export default {
         }
       }
 
+    },
+    goDetail(keyword,pos){
+      this.$router.push({
+        path:'detail',
+        query:{
+          keyword,
+          type:pos
+        }
+      })
     }
+
   },
 
 };

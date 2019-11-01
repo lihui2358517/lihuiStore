@@ -28,6 +28,7 @@ router.get('/crumbs',async (ctx)=>{
       sign
     }
   })
+   console.log(types,areas)
   ctx.body={
     areas: status===200?areas:[],
     types: status===200?types:[]

@@ -1,9 +1,9 @@
 <template>
 	<el-row :gutter="0" class='m-header'>
-	  <el-col :span="5">
+	  <el-col :span="3">
 			<Geo></Geo>
 	  </el-col>
-	  <el-col :span="5">
+	  <el-col :span="7">
 	  	<User></User>
 	  </el-col>
 	  <el-col :span="14">

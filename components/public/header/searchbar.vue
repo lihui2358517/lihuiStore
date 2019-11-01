@@ -25,13 +25,13 @@
         </div>
         <ul class="nav">
           <li>
-            <nuxt-link to='/' class='takeout'>美团外卖</nuxt-link>
+            <nuxt-link to='/' class='takeout'>惠团外卖</nuxt-link>
           </li>
           <li>
             <nuxt-link to='/' class='movie'>猫眼电影</nuxt-link>
           </li>
           <li>
-            <nuxt-link to='/' class='hotel'>美团酒店</nuxt-link>
+            <nuxt-link to='/' class='hotel'>惠团酒店</nuxt-link>
           </li>
           <li>
             <nuxt-link to='/' class='apartment'>民宿/公寓</nuxt-link>
@@ -89,6 +89,7 @@ export default {
     },
     goProduct(key){
     	// "/products?city="++"&keyword="+encodeURIComponent(item.name)'
+      this.search = ''
     	this.$router.push("/products?keyword="+encodeURIComponent(key))
     },
     input: _.debounce(async function() {

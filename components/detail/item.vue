@@ -41,6 +41,7 @@ export default {
   },
   methods: {
     createCart: async function () {
+      debugger
       let self = this;
       let {
         status,
@@ -59,13 +60,14 @@ export default {
         }
       })
       if(status===200&&code===0){
+        console.log('cart')
         window.location.href=`/cart/?id=${id}`
       }else{
         console.log('error')
       }
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

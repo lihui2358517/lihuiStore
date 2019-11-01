@@ -1,0 +1,45 @@
+.m-order {
+  img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .el-row {
+    padding: 20px 0;
+    height: 131px;
+    border-bottom: 1px solid #E5E5E5;
+
+    &:last-child {
+      border: none;
+    }
+
+    .el-col {
+      height: 90px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      &:nth-child(2) {
+        align-items: flex-start;
+
+        h4 {
+          font-size: 16px;
+          color: #222;
+          margin: 10px 0 10px 0;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+  .empty {
+    text-align: center;
+    padding: 80px;
+
+  }
+}

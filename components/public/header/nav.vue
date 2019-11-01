@@ -2,27 +2,18 @@
 	<div class="m-nav">
 		<ul class="nav">
 			<li class="list">
-				<nuxt-link to='/my'>我的惠团</nuxt-link>
+				<nuxt-link to='/'>我的惠团</nuxt-link>
 				<dl>
-					<dd><nuxt-link to=''>我的订单</nuxt-link></dd>
-					<dd><nuxt-link to=''>我的收藏</nuxt-link></dd>
-					<dd><nuxt-link to=''>抵用券</nuxt-link></dd>
-					<dd><nuxt-link to=''>账户设置</nuxt-link></dd>
+					<dd><nuxt-link to='/order'>我的订单</nuxt-link></dd>
 				</dl>
 			</li>
 			<li>
-				<nuxt-link to='/order'>手机APP</nuxt-link>
+				<nuxt-link to='/developed'>手机APP</nuxt-link>
 			</li>
 			<li class="list bd">
-				<nuxt-link to='/center'>商家中心</nuxt-link>
-				<dl>
-					<dd><nuxt-link to=''>登录商家中心</nuxt-link></dd>
-					<dd><nuxt-link to=''>我想合作</nuxt-link></dd>
-					<dd><nuxt-link to=''>免费手机开店</nuxt-link></dd>
-					<dd><nuxt-link to=''>商家申请开票</nuxt-link></dd>
-				</dl>
+				<nuxt-link to='/developed'>商家中心</nuxt-link>
 			</li>
-			<li class="list site">
+			<!-- <li class="list site">
 				<nuxt-link to='/site'>网站导航</nuxt-link>
 				<div class="subContainer">
 					<dl class="hotel">
@@ -96,7 +87,7 @@
 			            </dd>
 					</dl>
 				</div>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </template>

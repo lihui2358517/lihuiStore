@@ -13,7 +13,7 @@
 		<div class="detail" v-if='kind' @mouseenter='inte'  @mouseleave='out'>
 			<template v-for='(item,index) in curdetail.child'>
 				<h4 :key='index'>{{item.title}}</h4>
-				<span v-for='its in item.child'>{{its}}</span>	
+				<span v-for='its in item.child' @click='goDetail(its,item.title)'>{{its}}</span>	
 			</template>
 			
 		</div>
@@ -48,6 +48,15 @@
 			},
 			out(){
 				this.kind = ''
+			},
+			goDetail(keyword,type){
+				this.$router.push({
+			        path:'detail',
+			        query:{
+			          keyword,
+			          type:type
+			        }
+			    })
 			}
 
 		}
