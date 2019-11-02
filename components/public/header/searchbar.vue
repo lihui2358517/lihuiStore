@@ -7,7 +7,7 @@
       <el-col class='center' :span="15">
         <div class="wrapper">
           <el-input v-model='search' placeholder='搜索商家或地点' @focus='focus' @blur='blur' @input='input($emit)'></el-input>
-          <button class="el-button el-button--primary"><i class="el-icon-search"></i></button>
+          <button class="el-button el-button--primary" @click='goProduct(search)'><i class="el-icon-search"></i></button>
           <dl class="hotPlace" v-if='isHotPlace'>
             <dt>热门搜索</dt>
             <dd v-for='(item,idx) in $store.state.home.hotPlace.slice(0,5)' :key='idx'>
